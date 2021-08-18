@@ -1,0 +1,40 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #6F4C5B;
+}
+
+.nav-link, .navbar-brand {
+  color: #fff;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #fff;
+}
+
+.caption {
+  background-color: #F5E8C7;
+}
+
+.btn-add {
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 50%;
+}
+
+.btn-add:hover {
+  color: #fff;
+}
+
+label {
+  color: #fff;
+  font-size: 20px;
+}
+
+.btn-register, .btn-signin {
+  background-color: #DEBA9D;
+  color: #6F4C5B;
+}
+/*# sourceMappingURL=style.css.map */

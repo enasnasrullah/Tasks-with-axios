@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container">
+      <a class="navbar-brand" href="#">MY TODO LIST</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-caret-down"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="signout" href="#">SignOut</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NOTES -->
+
+  <section class="p-5 container-fluid">
+   
+    <div class="row" id="tasks">
+     
+    
+    </div>
+  </section>
+
+  <div class="addNoteIcon text-center">
+    <button href="#" class="btn btn-add" data-toggle="modal" data-target="#AddTODO">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+
+  <!-- ADD todo  Modal -->
+
+  <div class="modal fade" id="AddTODO" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add TODO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-12 form-group">
+                <textarea class="form-control" cols="30" rows="10" placeholder="text-area" id="disc"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" id="AddNote" class="btn btn-primary">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete todo  Modal -->
+  <div class="modal fade" id="deleteTODO" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">DELETE TODO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="hidden" id="deleteTodoId">
+                <h4>DO YOU WANT TO DELETE?</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button onclick="deleteTask ()" type="button" class="btn btn-secondary" >
+            DELETE
+          </button>
+          <button  type="button" class="btn btn-primary">CANCEL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit todo  Modal -->
+  <div class="modal fade" id="EditTODO" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Save TODO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-12 form-group">
+                <input type="hidden" id="edittaskid">
+                <textarea  disabled id="taskDisc" class="form-control" cols="30" rows="10" placeholder="text-area"></textarea>
+              </div>
+              <div class="col-md-12 form-group">
+                <span id="completedTaskLabel" for="completedTask">CompletTask</span>
+                <input type="checkbox" id="completedTask">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" onclick="EditTask()" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="script/jquery-3.5.1.slim.min.js"></script>
+  <script src="script/popper.min.js"></script>
+  <script src="script/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

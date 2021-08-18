@@ -1,0 +1,51 @@
+$headingColor: #fff;
+$backgroundColor:#6F4C5B;
+$titleColor:#DEBA9D;
+$backgroundCard:#F5E8C7;
+
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body
+{
+    background-color: $backgroundColor;
+}
+.nav-link,.navbar-brand
+{
+    color: $headingColor;
+    &:hover
+    {
+        color: $headingColor;
+    }
+}
+.caption
+{
+    background-color: $backgroundCard;
+}
+.btn-add
+{
+    color: $headingColor;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    &:hover{
+        color: $headingColor;
+    }
+}
+
+label
+{
+    color: $headingColor;
+    font-size: 20px;
+}
+.btn-register, .btn-signin
+{
+    background-color: $titleColor;
+    color: $backgroundColor;
+}
+
+#completedTaskLabel
+{
+    color: $backgroundColor !important;
+}
